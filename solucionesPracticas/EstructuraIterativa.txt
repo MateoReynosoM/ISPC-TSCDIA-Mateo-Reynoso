@@ -1,0 +1,23 @@
+Mostrar los números desde el 0 al número solicitado al usuario.
+
+Análisis
+Entrada: número límite (numero_limite de tipo int)
+Salida: números desde 0 hasta numero_limite
+Descripción: Este programa muestra los números desde 0 hasta el número ingresado por el usuario.
+
+PSEINT:
+
+Algoritmo mostrar_numeros
+    Definir numero_limite Como Entero
+    Escribir "Ingrese un número: "
+    Leer numero_limite
+    Para i <- 0 Hasta numero_limite Hacer
+        Escribir i
+    FinPara
+FinAlgoritmo
+
+Python:
+
+numero_limite = int(input("Ingrese un número: "))
+for i in range(numero_limite + 1):
+    print(i)

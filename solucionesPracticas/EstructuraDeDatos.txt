@@ -1,0 +1,19 @@
+Eliminar la tercer y la última persona de la lista del ejercicio 1, luego ordenar la lista y mostrarla.
+
+Descripción: Este programa elimina la tercera y la última persona de una lista, luego ordena la lista y la muestra.
+
+Lista de nombres del ejercicio 1
+
+nombres = ['Ana', 'Beto', 'Carlos', 'Diana', 'Elena', 'Fernando', 'Gloria', 'Hugo', 'Isabel', 'Juan']
+
+Eliminar la tercera persona (índice 2) y la última persona (índice -1)
+del nombres[2]
+del nombres[-1]
+
+Ordenar la lista
+nombres.sort()
+
+Mostrar la lista ordenada
+print("Lista después de eliminar y ordenar:")
+for nombre in nombres:
+    print(nombre)

@@ -1,0 +1,37 @@
+Pintor
+
+Un pintor de casas debe hacer un presupuesto para un cliente. Lo que cobra se calcula de acuerdo a los metros 
+cuadrados que debe pintar. El cliente le indica que necesita conocer el costo de mano de obra para pintar una pared 
+rectangular de un galpón. El pintor cobra un monto ﬁjo por cada metro cuadrado. 
+Puedes hacer un algoritmo para calcular el costo de mano de obra para pintar la pared.
+
+PSINT:
+
+Algoritmo CalcularCostoPintura
+    	Definir altura, ancho, costo_por_m2, costo_total Como Real
+
+   		 Escribir "Ingrese la altura de la pared en metros:"
+    		 Leer altura
+    		 Escribir "Ingrese el ancho de la pared en metros:"
+    		 Leer ancho
+   		 Escribir "Ingrese el costo por metro cuadrado:"
+   		 Leer costo_por_m2
+
+    		costo_total = altura * ancho * costo_por_m2
+
+    		Escribir "El costo total de la mano de obra para pintar la pared es: $", costo_total
+
+	FinAlgoritmo
+
+PYTHON:
+
+def calcular_puntos_equipo():
+    partidos_ganados = int(input("Ingrese la cantidad de partidos ganados: "))
+    partidos_empatados = int(input("Ingrese la cantidad de partidos empatados: "))
+    partidos_perdidos = int(input("Ingrese la cantidad de partidos perdidos: "))
+
+    puntos_totales = (partidos_ganados * 3) + (partidos_empatados * 1)
+
+    print(f"El equipo ha acumulado {puntos_totales} puntos.")
+
+calcular_puntos_equipo()

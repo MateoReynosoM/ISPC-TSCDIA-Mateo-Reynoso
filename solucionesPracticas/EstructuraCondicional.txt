@@ -1,0 +1,63 @@
+Despensa
+
+Una despensa de barrio vende la leche de vaca entera de litro a 1000 pesos la unidad. Si el cliente compra más de 12  
+unidades (y hasta 24 unidades), el costo tiene un descuento del 10%. Si compra más de 24 unidades, el descuento es del 15%. 
+Además posee la promoción a los jubilados. La promoción de jubilados es sumarle un 10% de descuento (si posee otros 
+descuentos, se suma los descuentos). Desarrolle una solución algorítmica para saber cuento debe pagar el cliente.
+
+Descripción : 
+
+Este programa calcula el monto a pagar en una despensa por la compra de leche de vaca entera, aplicando descuentos 
+según la cantidad comprada y si el cliente es jubilado.
+
+
+Psint:
+
+Algoritmo calcular_monto_a_pagar
+    Definir unidadesDeLeche Como Entero
+    Definir esJubilado Como Logico
+    Definir montoParcial, montoAPagar Como Real
+    
+    Escribir "Ingrese la cantidad de unidades de leche: "
+    Leer unidadesDeLeche
+    Escribir "Es jubilado? (Verdadero o Falso): "
+    Leer esJubilado
+    
+    montoParcial = unidadesDeLeche * 1000
+    
+    Si unidadesDeLeche > 24 Entonces
+        montoAPagar = montoParcial * 0.85
+    Sino
+        Si unidadesDeLeche > 12 Entonces
+            montoAPagar = montoParcial * 0.90
+        SiNo
+            montoAPagar = montoParcial
+        FinSi
+    FinSi
+    
+    Si esJubilado Entonces
+        montoAPagar = montoAPagar * 0.90
+    FinSi
+    
+    Escribir "El monto a pagar es: ", montoAPagar
+FinAlgoritmo
+
+
+Python:
+
+unidadesDeLeche = int(input("Ingrese la cantidad de unidades de leche: "))
+esJubilado = input("Es jubilado? (si/no): ").strip().lower() == 'si'
+
+montoParcial = unidadesDeLeche * 1000
+
+if unidadesDeLeche > 24:
+    montoAPagar = montoParcial * 0.85
+elif unidadesDeLeche > 12:
+    montoAPagar = montoParcial * 0.90
+else:
+    montoAPagar = montoParcial
+
+if esJubilado:
+    montoAPagar *= 0.90
+
+print(f"El monto a pagar es: {montoAPagar}")
